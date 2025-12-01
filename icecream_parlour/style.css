@@ -1,0 +1,196 @@
+/* Global */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff7fc;
+   display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+/* Main content should expand to push footer down */
+main {
+  flex: 1;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 40px;
+  background: #f7cae7;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  padding: 8px 15px;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+nav ul li a:hover,
+.active {
+  background: #ff8ccd;
+  color: white !important;
+}
+
+/* Banner */
+.banner {
+  height: 98vh;
+  background: url('https://imgs.search.brave.com/pqsmrw2xgm7hoIs989Cf_FqevLG-p-Lg32bKUgrRf_w/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzA3LzMwLzk0Lzk5/LzM2MF9GXzczMDk0/OTkyOF9pcjRkTDdJ/ZGVuSzc1N2hVekhD/VHRXRHkxaW9VNDda/Ti5qcGc') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  transition: filter 0.4s ease;
+  
+}
+
+.banner:hover {
+  filter: brightness(0.85);
+}
+
+.banner h1 {
+  font-size: 4rem;
+  color: rgb(238, 236, 236);
+  text-shadow: 0 0 20px rgba(0,0,0,0.6);
+  animation: fadeIn 2s ease;
+  margin-top: 90px;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: scale(0.9);}
+  to {opacity: 1; transform: scale(1);}
+}
+
+/* Menu Cards */
+.menu-section {
+  padding: 50px;
+  text-align: center;
+}
+.menu-title{
+  padding-top: 10px;
+  text-align: center;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  transition: 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.order-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #ff77c3;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.order-btn:hover {
+  background: #ff57ad;
+  transform: scale(1.1);
+}
+
+/* Contact Page */
+.contact-section {
+  text-align: center;
+  padding: 40px;
+}
+
+form {
+  width: 350px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 12px;
+  background: #ff77c3;
+  border: none;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #ff57ad;
+  transform: scale(1.05);
+}
+/* ---------- TOP IMAGES FIXED SIZE ROW ---------- */
+.top-images {
+  display: flex;
+  gap: 25px;
+  padding: 30px;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  margin: 20px;
+}
+
+.top-images img {
+  width: 280px;        /* FIXED WIDTH */
+  height: 250px;       /* FIXED HEIGHT */
+  object-fit: cover;   /* makes images perfectly cropped */
+  border-radius: 15px;
+  flex-shrink: 0;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.top-images img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+
+.home-section{
+    margin: 10px 60px ;
+}
+footer {
+  margin-top: 50px;
+  padding: 20px;
+  background: #3b3b3b;
+  text-align: center;
+ 
+}
+
+footer p {
+  color: #ffffff;
+}
+
