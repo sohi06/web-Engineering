@@ -5,27 +5,93 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sweet Scoops - Home</title>
   <link rel="stylesheet" href="style.css">
+
+  
+      <link rel="stylesheet"
+     href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
 </head>
 <body>
 
   <nav>
     <h2 class="logo">Sweet Scoops</h2>
     <ul>
-      <li><a class="active" href="index.html">Home</a></li>
-      <li><a href="menu.html">Menu</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a class="active" href="index.html"><i class='bx bx-home' id="home"></i> Home</a></li>
+      <li><a href="menu.html"><i class='bx bx-menu' id="Menu"></i> Menu</a></li>
+      <li><a><i class='bx bx-cart-alt' id="cart-icon"></i> Cart</a></li>
+      <li><a href="contact.html"><i class="bx bx-envelope"></i> Contact</a></li>         
+      <li><a ><i class='bx bx-user' id="user-icon"></i> Hi Sohi!</a></li>
+    </div>
     </ul>
   </nav>
+
+ 
+  <!-- User Popup -->
+<div id="userPopup" class="popup">
+  <div class="popup-content">
+    <h2>You are already logged in</h2>
+    <button id="logoutBtn">Sign Out</button>
+    <button class="closeBtn">Close</button>
+  </div>
+</div>
+<!-- Cart Popup -->
+<div id="cartPopup" class="popup">
+  <div class="popup-content cart-box">
+
+    <h2>Your Cart</h2>
+
+    <div class="cart-item">
+  <img src="img1.jpg" alt="">
+  <div>
+    <h3>Chocolate Ice Cream</h3>
+
+    <div class="qty-box">
+      <button class="qty-btn minus">−</button>
+      <span class="qty-number">1</span>
+      <button class="qty-btn plus">+</button>
+    </div>
+  </div>
+</div>
+
+   <div class="cart-item">
+  <img src="img1.jpg" alt="">
+  <div>
+    <h3>Chocolate Ice Cream</h3>
+
+    <div class="qty-box">
+      <button class="qty-btn minus">−</button>
+      <span class="qty-number">1</span>
+      <button class="qty-btn plus">+</button>
+    </div>
+  </div>
+</div>
+
+    <div class="cart-item">
+  <img src="img1.jpg" alt="">
+  <div>
+    <h3>Chocolate Ice Cream</h3>
+
+    <div class="qty-box">
+      <button class="qty-btn minus">−</button>
+      <span class="qty-number">1</span>
+      <button class="qty-btn plus">+</button>
+    </div>
+  </div>
+</div>
+    <button id="checkoutBtn">Checkout</button>
+    <button class="closeBtn">Close</button>
+
+  </div>
+</div>
+
+
+
 
   </section>
   
   <header class="banner">
     <h1>Welcome to Sweet Scoops</h1>
-    
+   
   </header>
-
-
-
 
   <section class="home-section">
     <h2>Fresh & Creamy Ice Cream Every Day!</h2>
