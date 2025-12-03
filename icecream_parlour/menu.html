@@ -7,22 +7,75 @@
   <link rel="stylesheet" href="style.css">
       <link rel="stylesheet"
      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+     
 </head>
 </head>
 <body>
-    <nav>
+<!-- NAVIGATION -->
+  <nav>
     <h2 class="logo">Sweet Scoops</h2>
     <ul>
-      <li><a  href="index.html"><i class='bx bx-home' id="home"></i> Home</a></li>
-      <li><a class="active" href="menu.html"><i class='bx bx-menu' id="Menu"></i> Menu</a></li>
-      <li><a href="cart.html"><i class='bx bx-cart-alt' id="cart-icon"></i> Cart</a></li>
-      <li><a  href="contact.html"><i class="bx bx-envelope"></i> Contact</a></li>         
-      <li><a href="user.html"><i class='bx bx-user' id="user-icon"></i> Hi Sohi!</a></li>
-    </div>
+      <li><a class="active" href="index.html"><i class='bx bx-home'></i> Home</a></li>
+      <li><a href="menu.html"><i class='bx bx-grid-alt'></i> Menu</a></li>
+      <li><a class="cart-btn"><i class='bx bx-cart-alt' id="cart-icon"></i> Cart</a></li>
+      <li><a href="contact.html"><i class="bx bx-envelope"></i> Contact</a></li>         
+      <li><a><i class='bx bx-user' id="user-icon"></i> <span id="user-text">Hi User!</span></a></li>
     </ul>
   </nav>
- <section class="menu-section">
-<h2 class="menu-title">Find the World Class Icecream here</h2></section>
+
+  <!-- LOGIN POPUP -->
+  <div id="loginPopup" class="popup">
+    <div class="popup-content">
+      <h2>Login</h2>
+      <input type="text" id="loginUser" placeholder="Username">
+      <input type="password" id="loginPass" placeholder="Password">
+      <button id="submitLogin">Login</button>
+      <button class="closeBtn">Close</button>
+    </div>
+  </div>
+
+  <!-- USER POPUP -->
+  <div id="userPopup" class="popup">
+    <div class="popup-content">
+      <h2>You are already logged in</h2>
+      <button id="logoutBtn">Sign Out</button>
+      <button class="closeBtn">Close</button>
+    </div>
+  </div>
+
+  <!-- CART POPUP -->
+ <div id="cartPopup" class="popup">
+    <div class="popup-content cart-box">
+      <h2>Your Cart</h2>
+
+      <div class="cart-item">
+        <img src="https://imgs.search.brave.com/YCfegg-vMTBYYjMKCE1e8poqoMQOtB2_qDCG8-2jyEw/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzUxLzA0/LzgxLzUxMDQ4MTli/NmVjMDc4NWVlOWZl/MTI3NTA4NGMwY2Zl/LmpwZw" alt="">
+        <div>
+          <h3>Chocolate Ice Cream</h3>
+          <div class="qty-box">
+            <button class="qty-btn minus">−</button>
+            <span class="qty-number">1</span>
+            <button class="qty-btn plus">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="cart-item">
+        <img src="https://imgs.search.brave.com/JWagHeX0mTblMFL7XiDNgkxOeoIpnKBnBPBoO98fyTE/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTM1/MTcwNTU5L3Bob3Rv/L2ljZWNyZWFtLXRo/cmVlLWJhbGxzLWlu/LXdhZmVyLndlYnA_/YT0xJmI9MSZzPTYx/Mng2MTImdz0wJms9/MjAmYz11MUhaaENI/WTFWM24tNlg5bG04/RTRoaDFQQVpXSWR4/MkVfcHZ2ZGZ5M204/PQ" alt="">
+        <div>
+          <h3>Chocolate Ice Cream</h3>
+          <div class="qty-box">
+            <button class="qty-btn minus">−</button>
+            <span class="qty-number">1</span>
+            <button class="qty-btn plus">+</button>
+          </div>
+        </div>
+      </div>
+
+      <button id="checkoutBtn">Checkout</button>
+      <button class="closeBtn">Close</button>
+    </div>
+  </div>
     <!--NEW IMAGE ROW ADDED HERE -->
    
   <section class="top-images">
@@ -67,3 +120,6 @@
 </footer>
 </body>
 </html>
+
+
+

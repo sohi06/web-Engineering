@@ -1,90 +1,91 @@
-// Example button click animation
+// Example order button animation
 document.querySelectorAll(".order-btn").forEach(btn => {
     btn.addEventListener("click", () => {
         alert("Thank you for your order! 🍨");
     });
 });
-// ===========================
-// POPUP ELEMENTS
-// ===========================
 
-// USER POPUP
+// POPUP ELEMENTS
 const userIcon = document.getElementById("user-icon");
 const userPopup = document.getElementById("userPopup");
 
-// CART POPUP
 const cartIcon = document.getElementById("cart-icon");
 const cartPopup = document.getElementById("cartPopup");
 
-// Close buttons
+const loginPopup = document.getElementById("loginPopup");
+
 const closeBtns = document.querySelectorAll(".closeBtn");
 
+// LOGIN LOGIC
+document.getElementById("submitLogin").addEventListener("click", () => {
+  const user = document.getElementById("loginUser").value;
+  const pass = document.getElementById("loginPass").value;
 
-// ===========================
-// USER POPUP EVENTS
-// ===========================
+  if (user === "" || pass === "") {
+    alert("Fill all fields!");
+    return;
+  }
 
+  localStorage.setItem("loggedUser", user);
+  document.getElementById("user-text").textContent = "Hi " + user + "!";
+  loginPopup.style.display = "none";
+  alert("Login Successful!");
+});
+
+// USER CLICK
 userIcon.addEventListener("click", () => {
-  userPopup.style.display = "flex";
+  const logged = localStorage.getItem("loggedUser");
+  if (logged) {
+    userPopup.style.display = "flex";
+  } else {
+    loginPopup.style.display = "flex";
+  }
 });
 
+// LOGOUT
 document.getElementById("logoutBtn").addEventListener("click", () => {
-  alert("You have been signed out!");
+  localStorage.removeItem("loggedUser");
+  document.getElementById("user-text").textContent = "Hi User!";
   userPopup.style.display = "none";
+  alert("Logged out!");
 });
 
-
-// ===========================
-// CLOSE ANY POPUP
-// ===========================
-
+// CLOSE POPUPS
 closeBtns.forEach(btn => {
   btn.addEventListener("click", () => {
     userPopup.style.display = "none";
     cartPopup.style.display = "none";
+    loginPopup.style.display = "none";
   });
 });
 
+// OUTSIDE CLICK
 window.addEventListener("click", (e) => {
   if (e.target === userPopup) userPopup.style.display = "none";
   if (e.target === cartPopup) cartPopup.style.display = "none";
+  if (e.target === loginPopup) loginPopup.style.display = "none";
 });
 
-
-// ===========================
-// CART POPUP EVENTS
-// ===========================
-
+// CART BUTTON
 cartIcon.addEventListener("click", () => {
   cartPopup.style.display = "flex";
 });
 
-
-// ===========================
-// QUANTITY BUTTON LOGIC (+ / -)
-// ===========================
-
-// All plus & minus buttons
+// QUANTITY BUTTONS
 const plusBtns = document.querySelectorAll(".plus");
 const minusBtns = document.querySelectorAll(".minus");
 
-// Increase quantity
 plusBtns.forEach(btn => {
   btn.addEventListener("click", () => {
     let numberSpan = btn.parentElement.querySelector(".qty-number");
-    let number = parseInt(numberSpan.textContent);
-    number++;
-    numberSpan.textContent = number;
+    numberSpan.textContent = parseInt(numberSpan.textContent) + 1;
   });
 });
 
-// Decrease quantity
 minusBtns.forEach(btn => {
   btn.addEventListener("click", () => {
     let numberSpan = btn.parentElement.querySelector(".qty-number");
-    let number = parseInt(numberSpan.textContent);
-    if (number > 1) number--; // prevent 0
-    numberSpan.textContent = number;
+    let n = parseInt(numberSpan.textContent);
+    if (n > 1) numberSpan.textContent = n - 1;
   });
 });
-

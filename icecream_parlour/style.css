@@ -5,10 +5,10 @@
   --purple-bg: #f8eaff;
   --purple-card: #f4d8ff;
   --purple-light: #f3e8ff;
-  --purple-mid: #d8b4fe;
-  --purple-dark: #c29fe2;
-  --text-dark: #3a2b4a;
-  --white: #ffffff;
+  --purple-mid: #c599f5;
+  --purple-dark: #f3c3fd;
+  --text-dark: #231e29;
+  --white: #201e1e;
 }
 
 /* ===========================================
@@ -26,43 +26,44 @@ body {
 
 main { flex: 1; }
 
-/* ===========================================
-   NAVIGATION BAR
-=========================================== */
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 40px;
-  background: var(--purple-dark);
+  padding: 18px 40px;
+  background: #d79cee;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 nav .logo {
-  color: var(--white);
-  font-size: 24px;
+  font-size: 28px;
   font-weight: bold;
+  color: #fff;
 }
 
 nav ul {
-  display: flex;
   list-style: none;
-  gap: 10px;
-  padding: 0;
+  display: flex;
+  gap: 25px;
 }
+
 
 nav ul li a {
   text-decoration: none;
-  color: var(--white);
+  color: rgb(255, 255, 255);
   font-weight: bold;
   padding: 8px 15px;
   border-radius: 20px;
   transition: 0.3s;
 }
+nav ul li a:hover ,
+av ul li a.active {
+  background: #bf8ff3;
+} 
 
-nav ul li a:hover,
-nav ul li a.active {
-  background: var(--purple-mid);
-}
+
 
 /* ===========================================
    BANNER
@@ -92,6 +93,8 @@ nav ul li a.active {
   to   {opacity: 1; transform: scale(1);}
 }
 
+
+
 /* ===========================================
    HOME SECTION
 =========================================== */
@@ -103,6 +106,40 @@ nav ul li a.active {
   box-shadow: 0 5px 20px rgba(120,0,200,0.2);
 }
 
+
+/* BLOG SECTION */
+.blogs {
+  padding: 40px 60px;
+}
+
+.blog-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.blog {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+  gap: 30px;
+}
+
+.blog.left img,
+.blog.right img {
+  width: 450px;
+  height: 350px;
+  border-radius: 12px;
+  box-shadow: 0 6px 10px #a79292;
+}
+
+.blog-text {
+  max-width: 550px;
+}
+
+.blog.right {
+  flex-direction: row-reverse;
+}
 /* ===========================================
    TOP IMAGES ROW
 =========================================== */
@@ -148,7 +185,7 @@ nav ul li a.active {
 
 .menu-title {
   font-size: 30px;
-  color: var(--purple-dark);
+  color: rgb(143, 50, 143);
  
 }
 
@@ -184,7 +221,7 @@ nav ul li a.active {
   background: var(--purple-dark);
   border: none;
   border-radius: 20px;
-  color: white;
+  color: rgb(73, 73, 73);
   cursor: pointer;
   transition: 0.3s;
 }
@@ -220,7 +257,7 @@ input, textarea {
 button {
   padding: 12px;
   background: var(--purple-dark);
-  color: white;
+  color: rgb(15, 15, 15);
   border: none;
   border-radius: 20px;
   cursor: pointer;
@@ -243,7 +280,7 @@ footer {
 }
 
 footer p {
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 /* ===========================================
@@ -294,7 +331,7 @@ footer p {
 }
 
 #logoutBtn { background: #e879f9; color: white; }
-#checkoutBtn { background: var(--purple-dark); color: white; }
+#checkoutBtn { background: rgb(161, 24, 161); color: white; }
 
 .closeBtn {
   background: var(--white);
@@ -310,9 +347,9 @@ footer p {
   align-items: center;
   margin: 15px 0;
   padding: 12px;
-  background: var(--white);
+  background: white;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(80, 0, 120, 0.2);
+  box-shadow: 0 4px 10px rgba(91, 22, 126, 0.2);
   border: 1px solid var(--purple-mid);
 }
 
@@ -328,12 +365,12 @@ footer p {
 .cart-item h3 {
   margin: 0;
   font-size: 18px;
-  color: var(--text-dark);
+  color: rgb(43, 11, 44);
 }
 
 .cart-item p {
   margin: 3px 0;
-  color: #5b4b6e;
+  color: #170a27;
 }
 
 /* QUANTITY BUTTONS */

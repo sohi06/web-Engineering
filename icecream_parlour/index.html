@@ -5,102 +5,124 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sweet Scoops - Home</title>
   <link rel="stylesheet" href="style.css">
-
-  
-      <link rel="stylesheet"
-     href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
 </head>
 <body>
 
+  <!-- NAVIGATION -->
   <nav>
     <h2 class="logo">Sweet Scoops</h2>
     <ul>
-      <li><a class="active" href="index.html"><i class='bx bx-home' id="home"></i> Home</a></li>
-      <li><a href="menu.html"><i class='bx bx-menu' id="Menu"></i> Menu</a></li>
-      <li><a><i class='bx bx-cart-alt' id="cart-icon"></i> Cart</a></li>
+      <li><a class="active" href="index.html"><i class='bx bx-home'></i> Home</a></li>
+      <li><a href="menu.html"><i class='bx bx-grid-alt'></i> Menu</a></li>
+      <li><a class="cart-btn"><i class='bx bx-cart-alt' id="cart-icon"></i> Cart</a></li>
       <li><a href="contact.html"><i class="bx bx-envelope"></i> Contact</a></li>         
-      <li><a ><i class='bx bx-user' id="user-icon"></i> Hi Sohi!</a></li>
-    </div>
+      <li><a><i class='bx bx-user' id="user-icon"></i> <span id="user-text">Hi User!</span></a></li>
     </ul>
   </nav>
 
- 
-  <!-- User Popup -->
-<div id="userPopup" class="popup">
-  <div class="popup-content">
-    <h2>You are already logged in</h2>
-    <button id="logoutBtn">Sign Out</button>
-    <button class="closeBtn">Close</button>
-  </div>
-</div>
-<!-- Cart Popup -->
-<div id="cartPopup" class="popup">
-  <div class="popup-content cart-box">
-
-    <h2>Your Cart</h2>
-
-    <div class="cart-item">
-  <img src="img1.jpg" alt="">
-  <div>
-    <h3>Chocolate Ice Cream</h3>
-
-    <div class="qty-box">
-      <button class="qty-btn minus">−</button>
-      <span class="qty-number">1</span>
-      <button class="qty-btn plus">+</button>
+  <!-- LOGIN POPUP -->
+  <div id="loginPopup" class="popup">
+    <div class="popup-content">
+      <h2>Login</h2>
+      <input type="text" id="loginUser" placeholder="Username">
+      <input type="password" id="loginPass" placeholder="Password">
+      <button id="submitLogin">Login</button>
+      <button class="closeBtn">Close</button>
     </div>
   </div>
-</div>
 
-   <div class="cart-item">
-  <img src="img1.jpg" alt="">
-  <div>
-    <h3>Chocolate Ice Cream</h3>
-
-    <div class="qty-box">
-      <button class="qty-btn minus">−</button>
-      <span class="qty-number">1</span>
-      <button class="qty-btn plus">+</button>
+  <!-- USER POPUP -->
+  <div id="userPopup" class="popup">
+    <div class="popup-content">
+      <h2>You are already logged in</h2>
+      <button id="logoutBtn">Sign Out</button>
+      <button class="closeBtn">Close</button>
     </div>
   </div>
-</div>
 
-    <div class="cart-item">
-  <img src="img1.jpg" alt="">
-  <div>
-    <h3>Chocolate Ice Cream</h3>
+  <!-- CART POPUP -->
+  <div id="cartPopup" class="popup">
+    <div class="popup-content cart-box">
+      <h2>Your Cart</h2>
 
-    <div class="qty-box">
-      <button class="qty-btn minus">−</button>
-      <span class="qty-number">1</span>
-      <button class="qty-btn plus">+</button>
+      <div class="cart-item">
+        <img src="https://imgs.search.brave.com/YCfegg-vMTBYYjMKCE1e8poqoMQOtB2_qDCG8-2jyEw/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzUxLzA0/LzgxLzUxMDQ4MTli/NmVjMDc4NWVlOWZl/MTI3NTA4NGMwY2Zl/LmpwZw" alt="">
+        <div>
+          <h3>Chocolate Ice Cream</h3>
+          <div class="qty-box">
+            <button class="qty-btn minus">−</button>
+            <span class="qty-number">1</span>
+            <button class="qty-btn plus">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="cart-item">
+        <img src="https://imgs.search.brave.com/JWagHeX0mTblMFL7XiDNgkxOeoIpnKBnBPBoO98fyTE/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTM1/MTcwNTU5L3Bob3Rv/L2ljZWNyZWFtLXRo/cmVlLWJhbGxzLWlu/LXdhZmVyLndlYnA_/YT0xJmI9MSZzPTYx/Mng2MTImdz0wJms9/MjAmYz11MUhaaENI/WTFWM24tNlg5bG04/RTRoaDFQQVpXSWR4/MkVfcHZ2ZGZ5M204/PQ" alt="">
+        <div>
+          <h3>Chocolate Ice Cream</h3>
+          <div class="qty-box">
+            <button class="qty-btn minus">−</button>
+            <span class="qty-number">1</span>
+            <button class="qty-btn plus">+</button>
+          </div>
+        </div>
+      </div>
+
+      <button id="checkoutBtn">Checkout</button>
+      <button class="closeBtn">Close</button>
     </div>
   </div>
-</div>
-    <button id="checkoutBtn">Checkout</button>
-    <button class="closeBtn">Close</button>
 
-  </div>
-</div>
-
-
-
-
-  </section>
-  
+  <!-- BANNER -->
   <header class="banner">
     <h1>Welcome to Sweet Scoops</h1>
-   
   </header>
 
+  <!-- HOME SECTION -->
   <section class="home-section">
     <h2>Fresh & Creamy Ice Cream Every Day!</h2>
-    <p><h3>Discover a world of flavours made with love and fresh ingredients.</h3></p>
-    <p>Ice cream is a beloved frozen dessert enjoyed by people of all ages around the world. Made from a rich blend of cream, milk, and sugar, it is churned to create a smooth, creamy texture that melts delightfully in the mouth. Available in countless flavors—from classic vanilla and chocolate to exotic matcha or salted caramel—ice cream offers something for everyone. It’s not just a treat for the taste buds but also a source of joy and nostalgia, often associated with summer days, celebrations, and family outings. Whether served in a cone, a cup, or as part of a decadent sundae, ice cream continues to be a timeless favorite across cultures.</p>
+    <p>Discover a world of flavours made with love and fresh ingredients.</p>
+    <p>
+      Ice cream is a beloved frozen dessert enjoyed by people of all ages...
+    </p>
   </section>
-<footer>
-  <p>© 2025 CarEdge. All rights reserved.</p>
-</footer>
-  <script src="script.js"></script>
+
+  <!-- BLOG SECTION -->
+  <section class="blogs">
+    <h2 class="blog-title">Latest Blogs</h2>
+
+    <div class="blog left">
+      <img src="https://imgs.search.brave.com/XQfRDg8vzrDvPbt8BAADZSPVK5hxKX7AR6QXE66I9R8/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9ibG9n/LmZlZWRzcG90LmNv/bS93cC1jb250ZW50/L3VwbG9hZHMvMjAx/Ny8wMi9pY2VjcmVh/bS5qcGc" alt="">
+      <div class="blog-text">
+        <h3>Why Ice Cream Makes People Happy</h3>
+        <p>Eating ice cream can make people happy due to its effects on the brain's pleasure centers. Scientific studies have shown that consuming ice cream activates the orbitofrontal cortex (OFC), a region of the brain associated with processing pleasurable experiences and reward value.
+ This activation occurs even with just a single bite or taste, indicating an immediate response to the sensory experience....</p>
+      </div>
+    </div>
+
+    <div class="blog right">
+      <div class="blog-text">
+        <h3>Top 10 Flavours Loved Worldwide</h3>
+        <p>From vanilla to pistachio — here are the flavours people love most...</p>
+      </div>
+      <img src="https://imgs.search.brave.com/z-h3m-5EMCrnlf9CTK5HRWD4R8W1nXjUzn8XwPN-YSs/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vcGhvdG9z/L3N1bW1lci1pY2Ut/Y3JlYW0tYnVmZmV0/LXRhYmxlLXdpdGgt/YS12YXJpZXR5LW9m/LWZsYXZvcnMtYW5k/LXN3ZWV0LXBpY3R1/cmUtaWQxMzI0NDAy/NDYyP2s9MjAmbT0x/MzI0NDAyNDYyJnM9/NjEyeDYxMiZ3PTAm/aD1oai1DZDNoMFhQ/MVhZYzZBNzFOOUVB/QUlReDFDaVNYdDFC/WmhrRURYNXFRPQ" alt="">
+    </div>
+
+    <div class="blog left">
+      <img src="https://imgs.search.brave.com/ZfCBbWS4TLnNMpWmzm1SIGRRDcMyBF7DUhKpPr3j5eQ/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wMjYv/NTcxLzIwMi9zbWFs/bC9hLWRlbGljaW91/cy1iYW5hbmEtc3Bs/aXQtaWNlLWNyZWFt/LWRlc3NlcnQtd2l0/aC1jaG9jb2xhdGUt/c3lydXAtYmFuYW5h/LXNwbGl0LWljZS1j/cmVhbS1kZXNzZXJ0/LWJ5LWFpLWdlbmVy/YXRlZC1mcmVlLXBo/b3RvLmpwZw" alt="">
+      <div class="blog-text">
+        <h3>How We Make Fresh Ice Cream Daily</h3>
+        <p>We use fresh milk, real fruits and special techniques to make icecream...</p>
+      </div>
+    </div>
+
+  </section>
+
+  <footer>
+    <p>© 2025 Sweet Scoops. All rights reserved.</p>
+  </footer>
+
+<script src="script.js"></script>
 </body>
 </html>
